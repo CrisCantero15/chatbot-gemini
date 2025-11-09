@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.chatbot {
+    height: 100vh;
+    background-color: rgb(32, 57, 81);
+    padding: 10vh 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.chatbot h2 {
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 600;
+    font-size: 3em;
+    color: rgb(252, 252, 252);
+    margin-bottom: 5vh;
+    text-align: center;
+}
+
+.chatbot .conversation {
+    width: 60%;
+    height: 50%;
+    box-shadow: 0px 0px 6px rgba(252, 252, 252, 1);
+    margin-bottom: 3vh;
+    padding: 2vh 2.5%;
+    overflow: auto;
+}
+
+.conversation h2 {
+    font-family: 'Source Sans 3';
+    font-weight: 600;
+    font-size: 1.5em;
+    color: rgb(255 176 176);
+    padding-bottom: 0.5vh;
+    margin: 0;
+    text-align: left;
+}
+
+.conversation p {
+    font-family: 'Source Sans 3';
+    font-weight: 400;
+    font-size: 1.2em;
+    color: rgb(252, 252, 252);
+    padding-bottom: 5vh;
+    margin: 0;
+}
+
+.boxLoading {
+    display: none;
+    width: 4%;
+    margin-bottom: 3vh;
+}
+
+.boxLoading img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.input {
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+form {
+    width: 100%;
+}
+
+.textMessage {
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.textMessage input[type="text"] {
+    width: calc(85% - 0.5em);
+    margin-right: 1em;
+    height: 4vh;
+    padding: 1vh 1.5%;
+    font-family: 'Source Sans 3';
+    font-weight: 400;
+    font-size: 1em;
+    background-color: rgb(252, 252, 252);
+    border-radius: 10px;
+}
+
+.textMessage button {
+    width: calc(15% - 0.5em);
+    height: 4vh;
+    background-color: rgb(203 211 81);
+    font-family: 'Source Sans 3';
+    font-weight: 600;
+    font-size: 1em;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.textMessage button:hover {
+    transform: scale(1.1);
+}
+
+@media only screen and (max-width: 1000px) {
+
+    .chatbot .conversation {
+        width: 100%;
+    }
+
+    .textMessage {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .textMessage input[type="text"] {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 1vh;
+    }
+
+    .textMessage button {
+        width: 25%;
+    }
+
+}
